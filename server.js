@@ -44,6 +44,11 @@ app.get("/api/analytics/:userId", async (req, res) => {
   res.json(data);
 });
 
+app.get("/", (req, res) => {
+  res.send("✅ Server is running!");
+});
+
+
 // Start Server
 const PORT = process.env.PORT || 5000;
 app.listen(PORT, () => console.log(`Server running on port ${PORT}`));
